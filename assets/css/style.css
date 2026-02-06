@@ -983,3 +983,24 @@ footer {
     padding: 0.75rem var(--spacing-lg);
   }
 }
+
+/* Remova ou corrija estas partes: */
+
+.swiper-wrapper {
+  display: flex; /* O Swiper já faz isso, mas garantir não custa */
+  align-items: stretch;
+}
+
+/* Corrigido de .swiper-slider para .swiper-slide */
+.swiper-slide {
+  display: flex;
+  height: auto; /* Permite que o card dite a altura */
+  justify-content: center; /* Centraliza o card no slide */
+}
+
+/* Remova larguras fixas que podem travar o layout */
+.project-card {
+  width: 100%; /* Ocupa a largura do slide definida no JS */
+  display: flex;
+  flex-direction: column;
+}
